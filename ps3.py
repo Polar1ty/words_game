@@ -5,7 +5,7 @@
 #
 # Name          : Alexey Bayda
 # Collaborators : <your collaborators>
-# Time spent    : <total time>
+# Time spent    : 1 night
 
 import math
 import random
@@ -21,9 +21,6 @@ SCRABBLE_LETTER_VALUES = {
     'a': 1, 'b': 3, 'c': 3, 'd': 2, 'e': 1, 'f': 4, 'g': 2, 'h': 4, 'i': 1, 'j': 8, 'k': 5, 'l': 1, 'm': 3, 'n': 1, 'o': 1, 'p': 3, 'q': 10, 'r': 1, 's': 1, 't': 1, 'u': 1, 'v': 4, 'w': 4, 'x': 8, 'y': 4, 'z': 10
 }
 
-# -----------------------------------
-# Helper code
-# (you don't need to understand this helper code)
 
 WORDLIST_FILENAME = "words.txt"
 
@@ -62,12 +59,6 @@ def get_frequency_dict(sequence):
     return freq
 	
 
-# (end of helper code)
-# -----------------------------------
-
-#
-# Problem #1: Scoring a word
-#
 def get_word_score(word, n):
     """
     Returns the score for a word. Assumes the word is a
@@ -126,10 +117,7 @@ def display_hand(hand):
              print(letter, end=' ')      # print all on the same line
     print()                              # print an empty line
 
-#
-# Make sure you understand how this function works and what it does!
-# You will need to modify this for Problem #4.
-#
+
 def deal_hand(n):
     """
     Returns a random hand containing n lowercase letters.
@@ -157,9 +145,7 @@ def deal_hand(n):
     
     return hand
 
-#
-# Problem #2: Update a hand by removing letters
-#
+
 def update_hand(hand, word):
     """
     Does NOT assume that hand contains every letter in word at least as
@@ -189,9 +175,6 @@ def update_hand(hand, word):
     return new_hand
 
 
-#
-# Problem #3: Test word validity
-#
 def is_valid_word(word, hand, word_list):
     """
     Returns True if word is in the word_list and is entirely
@@ -213,9 +196,8 @@ def is_valid_word(word, hand, word_list):
         return True
     else:
         return False
-#
-# Problem #5: Playing a hand
-#
+
+
 def calculate_handlen(hand):
     """ 
     Returns the length (number of letters) in the current hand.
@@ -295,10 +277,6 @@ def play_hand(hand, word_list):
 
     return total_score
 
-
-#
-# Problem #6: Playing a game
-# 
 
 def substitute_hand(hand, letter):
     """ 
